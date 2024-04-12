@@ -37,6 +37,25 @@ Esto nos permite hacer lo anterior, pero con menos lineas de código*/
     width: 100%;
 }
 
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+.menu__lista li{
+    align-self: center;
+}
+.menu__itens{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
+    display: none;
+}
+
 /*Todo lo que pongamos aqui se mostrara cuando los dispotivos tengan al menos 834px de ancho*/
 @media (min-width: 834px){
 /*CABECERA*/
@@ -48,4 +67,17 @@ Esto nos permite hacer lo anterior, pero con menos lineas de código*/
     .rodapie__container{
         justify-content: space-between;/*Tenga espcio entre cada una de las columnas*/
     }
+    .menu__container{
+        left: 0%;
+        height: auto;
+        width: 75px;
+        top: 80px;
+    }
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px ;
+    }
+
 }
