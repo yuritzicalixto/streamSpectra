@@ -1,0 +1,51 @@
+/*CABECERA*/
+.cabecera__container{
+    display: flex; /*Permite a los elemetos estar uno al lado del otro*/
+    justify-content: space-between; /*Espaciado entre ellos*/
+    align-items: center;/*Alinea los elementos al centro*/
+    position: fixed; /*Pocisionamiento fijo*/
+    top: 0;/*Esto nos indica que será un posicionamiento en la parte superior*/
+}
+/*Oculta la barra de busqueda*/
+.cabecera__buscar__item{
+    display: none;
+}
+
+/*Pie*/
+.rodapie__container{
+    display: flex;
+    /*
+Cambia la dirección de los elementos a columnas
+    flex-direction: column;
+Permite tener más columnas
+    flex-wrap: wrap; 
+Esto nos permite hacer lo anterior, pero con menos lineas de código*/
+    flex-flow: column wrap;
+}
+/*SECCION SUPERIOR*/
+.superior__seccion__container{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll;
+    gap: 15px;
+}
+.menu__container{
+    position: fixed;
+    bottom: 0%;
+    height: 75px;
+    width: 100%;
+}
+
+/*Todo lo que pongamos aqui se mostrara cuando los dispotivos tengan al menos 834px de ancho*/
+@media (min-width: 834px){
+/*CABECERA*/
+    /*Muestra la barra de busqueda al cumplir con el ancho requerido*/
+    .cabecera__buscar__item {
+        display: block;
+    }
+/*PIE*/
+    .rodapie__container{
+        justify-content: space-between;/*Tenga espcio entre cada una de las columnas*/
+    }
+}
