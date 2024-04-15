@@ -1,0 +1,39 @@
+@media (min-width: 1440px){
+    .menu__container{
+        width: 239px; /*Ampliar el ancho*/
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;
+    }
+    
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+/*La sección 3 del menu, los elementos los pondra al reverso o invertidos, como originalmente estaban*/
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+    }
+
+    .menu__itens{
+        flex-direction: row; /*Se coloca uno a lado del otro*/
+        gap: 15px;
+        align-items: center;/*hacer que el texto este en el centro, teniendo una proporción exacta del icono al texto*/
+    }
+
+/*Nos permite ordenar los elementos de ese menú, de manera más manual*/    
+    .videojuegos{
+        order: 3;
+    }
+    .peliculas{
+        order: 2;
+    }
+    .premium{
+        order: 1;
+    }
+}

@@ -22,6 +22,20 @@ Permite tener más columnas
 Esto nos permite hacer lo anterior, pero con menos lineas de código*/
     flex-flow: column wrap;
 }
+/*VIDEOS*/
+.videos__item{
+    width: 290px;
+    height: 280px;
+/*El valor es de 1, para que sea proporcional*/
+    flex-grow: 1;
+}
+.videos__container{
+    display: flex;
+/*Envoltura flexible*/
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 /*SECCION SUPERIOR*/
 .superior__seccion__container{
     display: flex;
@@ -56,7 +70,6 @@ Esto nos permite hacer lo anterior, pero con menos lineas de código*/
     display: none;
 }
 
-/*Todo lo que pongamos aqui se mostrara cuando los dispotivos tengan al menos 834px de ancho*/
 @media (min-width: 834px){
 /*CABECERA*/
     /*Muestra la barra de busqueda al cumplir con el ancho requerido*/
